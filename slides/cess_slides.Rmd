@@ -62,14 +62,6 @@ class: inverse
 
 ### Neighborhood social control and crime
 
-???
-
-Our focus crime
-
-Crime always has risks
-
-Prosocial action does not always have risk but risk is an underappreciated element
-
 ---
 
 # Broken Windows
@@ -96,6 +88,14 @@ signalling low social control to offenders and (2) decreases actual social contr
 *This model is under-identified without instruments, manipulations, or repeated observations.*
 ]
 
+???
+
+Important thing to note here is that the reciprocal pathways operate through micro-macro linkages.
+
+The boxes here represent macro contexts and outcomes.
+
+If you can observe both the macro conditions and the micro-mechanisms the model is actually recursive. In general we cannot.
+
 ---
 
 # Collective Efficacy
@@ -117,6 +117,18 @@ signalling low social control to offenders and (2) decreases actual social contr
 *A, B, and E represent testable constraints on Broken Windows.*
 ]
 
+???
+
+This model is recursive at the macro level and easily identified absent observable micro-mechanisms.
+
+Statements of collective efficacy theory, however, appeal to micro-mechanisms based on sanctioning and monitoring.
+
+For people unfamiliar, collective efficacy in this literature is conceptualized as a collective problem solving capacity of neighborhoods---usually directed toward crime control. It both encourages resident interventions against crime and deters offending through expectations of interventions.
+
+It is operationalized as a combination of expectations for social control and perceived social cohesion. 
+
+Indicators like, "Would people in your neighborhood do something if kids were fighting in the street?" and "Do you think most people in this neighborhood have the same values?"
+
 ---
 
 # Our Review
@@ -127,6 +139,8 @@ Adjudicating between these models is difficult—[see our review for a discussio
 ![](img/annual_review.PNG)
 ]
 
+
+
 ---
 
 class: inverse
@@ -136,11 +150,17 @@ class: inverse
 
 ### [Sampson & Raudenbush (1999)](https://doi.org/10.1086/210356)
 
+???
+
+Very large literature on both theories independently and weighing against each other.
+
+Two major studies inform the present work.
+
 ---
 
 ## Keizer, Lindenberg, & Steg (2008)
 
-Keizer et al. used disorder manipulations and recorded norm violation with field experiments in Grongingen, the Netherlands. 
+Keizer et al. used disorder manipulations and recorded norm violation with field experiments in Groningen, the Netherlands. 
 
 Multiple interventions show a consistent positive relationship with norm violation.
 --
@@ -162,6 +182,14 @@ Multiple interventions show a consistent positive relationship with norm violati
 .centernote[
 *Can these be replicated in other locations? What is the influence of context?*
 ]
+
+???
+
+Norm violation included theft of a letter, minor trespassing, and littering a flyer placed on participants' cars.
+
+Disorder included litter, graffiti, ilelgally locked-up bikes, unreturned shopping carts, and fireworks.
+
+This targets the direct path in broken windows---disorder to crime---but posits a different mechanism: Goal-oriented norm compliance independent of sanctioning risk. The focus here is purely on micro-conditions and actions, not on micro-macro links.
 
 ---
 
@@ -191,6 +219,10 @@ Simultaneous equations of crime, disorder, and collective efficacy in Chicago ne
 *What are the micro-mechanisms? What is the role of context?*
 ]
 
+???
+
+An important element here is that broken windows posits disorder is a macro-contextual influence: the social control path is about pervasive disorder changing perceptions of an area. Small-scale interventions do not capture this. But, they also do not observe any micro-mechanisms.
+
 ---
 
 # Key Question
@@ -217,7 +249,7 @@ Collective efficacy predicts many prosocial behaviors:<sup>1</sup>
 * **Returning lost letters**
 * **Sanctioning norm-violators**
 * Voting
-* Providing CPR
+* Providing CPR to strangers
 
 .footnote[[1] [Sampson (2012)](https://www.press.uchicago.edu/ucp/books/book/chicago/G/bo5514383.html)]
 
@@ -227,7 +259,7 @@ Engaging in social control—sanctioning—is a *risky prosocial behavior*.
 
 --
 
-Prosocial action does not always feature risk but *risks and costs of prosocial behavior are underappreciated elements*.
+Prosocial action does not always feature risk but *risks and costs of prosocial behavior are underappreciated elements* in social control theories.
 
 
 ---
@@ -358,6 +390,10 @@ experiment_timeline
 # ggsave(file = "./img/experiment_timeline.svg")
 ```
 
+???
+
+Number of trials conducted was based on power analyses.
+
 ---
 
 ```{r, eval=TRUE, echo=FALSE, warning=FALSE, message=FALSE, cache=TRUE, results='hide', dev="svg", fig.height=6.15}
@@ -415,7 +451,11 @@ trial_map <- ggplot(experiment_tracts, aes(fill=Experiment)) +
 trial_map
 ```
 
+???
 
+Locations for all experiments except the lost letter were chosen by stratified random sample along dimensions of collective efficacy and concentrated disadvantage. Bunch on diagonal and off-diagonal on both sides.
+
+Letters were no dropped at UW or in SoDo industrial district
 
 ---
 class:inverse
@@ -430,7 +470,7 @@ Replication of [Milgram et al. (1965)](https://doi.org/10.1086/267344) and [Samp
 
 2,938 letters were dropped on Seattle sidewalks for passersby to encounter.<sup>1</sup>
 
-.footnote[[1] Drops conducted on foot in center city and by car in most tracts--at cost of one car accident. ]
+.footnote[[1] Drops conducted on foot in center city and by car in most tracts—at the cost of one car accident. ]
 
 --
 
@@ -443,9 +483,14 @@ Replication of [Milgram et al. (1965)](https://doi.org/10.1086/267344) and [Samp
 
 Mailed letters were received at a PO Box monitored by the research team.
 
+???
+
+We still have every single returned letter in storage.
+
 --
 
-Letters were geocoded to drop locations.
+Letters were geocoded to drop locations and featured a small printed ID number for tracking.
+
 
 ---
 # Lost Letter: Model
@@ -486,6 +531,10 @@ count:false
 [2] Note however that collective efficacy is persistent ([Sampson 2012](https://www.press.uchicago.edu/ucp/books/book/chicago/G/bo5514383.html)).
 ]
 
+???
+
+Collective efficacy here is measured with ten indicators in the SNCS used in a multi-level measurement model. See Matsueda & Drakulich (2016) in Sociological Methods and Research for more info.
+
 ---
 # Lost Letter: Results
 
@@ -510,6 +559,10 @@ count:false
 [2] Chicago, IL<br>
 [3] Seattle, WA
 ]
+
+???
+
+Low return in Chicago partly attributable to wind.
 
 ---
 
@@ -645,7 +698,7 @@ count: false
 
 * Researchers record whether participants mail, steal, or ignore the envelope.<sup>1</sup>
 
-.footnote[[1] Perceived sex, age, and group size of participants were also recorded to adjust for compositional differences of tracts.]
+.footnote[[1] Perceived gender, age, and group size of participants were also recorded to adjust for compositional differences of tracts.]
 
 --
 
@@ -674,7 +727,7 @@ Objective: Causal test of direct effect of disorder on crime (A).
 
 # Mailbox: Model
 
-Our Experiment: Causal tests of direct effects of disorder on crime and prosocial behavior---and observational test of collective efficacy.
+Our Experiment: Causal tests of direct effects of disorder on crime and prosocial behavior—and observational test of collective efficacy.
 <br>
 
 .image-75[
@@ -734,6 +787,14 @@ Key Findings:
 
 * Collective efficacy is associated with **lower theft**, but **not more mailing**.
 
+???
+
+Doing *anything* is somewhat uncommon.
+
+If you cut out the Walk-By outcome, the remaining counts will make it appear as if thefts are about 50% higher under treatment (still well shy of the doubling in Keizer et al.).
+
+Keizer et al. claim walking by was rare and that they collapsed them into mailings, however, so this omission doesn't explain their result.
+
 ---
 
 class: inverse
@@ -744,7 +805,7 @@ class: inverse
 
 ## Littering Intervention: Method
 
-A confederate walks down the street and flagrantly litters near a trash can in view of passersby.<sup>1</sup>
+A confederate walks down the street and flagrantly litters in view of passersby near a trash can with a no-littering sign.<sup>1</sup>
 
 .footnote[[1] Or perhaps hits their dog with garbage.
 <br>
@@ -760,16 +821,20 @@ Litter and a sign board with graffiti are introduced to manipulate disorder.
 
 --
 
-Replicated with three confederates of varying sex and race to manipulate interpersonal context which may influence evaluations of risk:<sup>2</sup>
-   * Black Male
-   * White Male
-   * White Female
+Replicated with three confederates of varying gender and race to manipulate interpersonal context which may influence evaluations of risk:<sup>2</sup>
+   * Black Man
+   * White Man
+   * White Woman
 
-.footnote[[2] Sex and race also relate to normative expectations.]
+.footnote[[2] Gender and race also relate to normative expectations.]
 
 --
 
 We conducted 576 trials in 12 Seattle census tracts.
+
+???
+
+8 trials per person per condition in 12 tracts. 8 x 2 x 3 x 12
 
 ---
 
@@ -844,9 +909,9 @@ count:false
   </tr>
   <tr>
     <th><br>Condition</th>
-    <th>Black<br>Male</th>
-    <th>White<br>Male</th>
-    <th>White<br>Female</th>
+    <th>Black<br>Man</th>
+    <th>White<br>Man</th>
+    <th>White<br>Woman</th>
     <th><br>All</th>
   </tr>
   <tr>
@@ -900,11 +965,15 @@ Key Findings:
 
 --
 * Sanctioning varies widely by confederate in both *quantity* and *content*.
-   * White female: *Confrontational* sanctions usually from men.
-   * Black male: *Non-confrontational* sanctions only from women.
-   * White male: *Non-confrontational* sanctions, men and women.
+   * White woman: *Confrontational* sanctions usually from men.
+   * Black man: *Non-confrontational* sanctions only from women.
+   * White man: *Non-confrontational* sanctions, men and women.
 
 ???
+
+One of the big takeaways here is that sanctioning for littering is just really quite rare. 
+
+As a result, our test here is underpowered.
 
 LB: 11/13 from men
 TP: 3 sanctions from women
@@ -1102,6 +1171,10 @@ count:false
 
 * In Ravenna, residents reported the magazine racks on Nextdoor as an "eyesore".
 
+???
+
+Ravenna, where I was living at the time, is a high collective efficacy, fairly affluent, residential neighborhood.
+
 --
 
 * Two magazine racks had locks cut and were removed.
@@ -1116,7 +1189,11 @@ count:false
 
 ???
 
-Maybe talk about Coleman and zeal
+Cap Hill, in contrast, is sort of a mostly gentrified high density neighborhood.
+
+Always feel like writing a research note on this talking about Coleman's Zeal as a CE mechanism.
+
+For unfamiliar, zeal is idea that free-riding--such as in social control systems--can be overcome when actors place high value in the praise or encouragement of others. That praise may be very low cost for those others to provide. That value asymmetry is essentially potential energy. Social media may be a powerful force for this.
 
 ---
 class: inverse
@@ -1133,14 +1210,56 @@ class: inverse
 .pull-right[
 1\.  No disorder effect on theft (A).
    * Unable to replicate Keizer et al. (2008)
-
-2\. Disorder attenuates low-risk, low-cost prosocial actions—mailing letters, throwing away litter—and possibly sanctioning as well (B).
-   * Consistent with indirect Broken Windows pathway.
-   
-   * Suggests feedback effect on collective efficacy.
 ]
 
+???
+
+This is a major takeaway. Keizer et al. is a heavily cited paper both in academic work and public discourse. Complete failure to replicate is notable. It is noteworthy another researcher, Volker, failed to replicate the letter experiment at the exact same street Keizer et al. used.
+
 ---
+count: false
+
+# Summary 1
+
+.pull-left[
+![](img/synthesis.svg)
+]
+
+.pull-right[
+1\.  No disorder effect on theft (A).
+   * Unable to replicate Keizer et al. (2008)
+
+2\. Disorder attenuates low-risk, low-cost prosocial actions—mailing letters, throwing away litter (B).
+   * Consistent with indirect Broken Windows pathway.
+   
+   * Suggests possible feedback effect on collective efficacy.
+]
+
+???
+
+This is a major takeaway. Keizer et al. is a heavily cited paper both in academic work and public discourse. Complete failure to replicate is notable. It is noteworthy another researcher, Volker, failed to replicate the letter experiment at the exact same street Keizer et al. used.
+
+---
+
+# Summary 2
+
+.pull-left[
+![](img/synthesis.svg)
+]
+
+
+.pull-right[
+3\. Collective efficacy predicts some low-risk prosocial action (H,K) but not higher risk actions—sanctioning.
+* Sanctioning is thought to be a key mechanism.
+* May have insufficient power to detect effect.
+]
+
+???
+
+No relationship with sanctioning is a problem if collective efficacy is assumed to operate by fostering individual interventions.
+
+---
+count: false
 
 # Summary 2
 
@@ -1160,6 +1279,14 @@ class: inverse
 * Possibly correlated with perceived *risk* of sanction or population composition.
 ]
 
+???
+
+No relationship with sanctioning is a problem if collective efficacy is assumed to operate by fostering individual interventions.
+
+This suggests CE is either operating through a non-sanctioning mechanism or the relationship is spurious.
+
+I have a paper forthcoming at Criminology in which I posit control of the built environment as one alternate CE mechanism.
+
 ---
 
 # Summary 3
@@ -1172,9 +1299,14 @@ class: inverse
 .pull-right[
 5\. Context matters for prosocial behavior (I).
    * Addresses of letters impact mailing.
-   * Target characteristics impact sanctioning.<sup>1</sup>
-   * Activation of collective efficacy is task and context specific.<sup>2</sup>
+   * Target characteristics impact sanctioning.
+   * Activation of collective efficacy is task and context specific.
 ]
+
+???
+
+That situational context matters should not surprise anyone. That it dominate macro contextual effects poses a problem for some of these theories. A large chunk of my dissertation is spent discussing this in the present theoretical context.
+
 
 ---
 
@@ -1189,15 +1321,27 @@ Contexts of prosocial behavior are important but neglected considerations for ne
 
 --
 
-   * Collective efficacy is associated with risk factors—such as retaliation from the sanctioned--as well as criminal opportunities (Lanfear 2022).
+   * Collective efficacy is associated with risk factors—such as retaliation from the sanctioned—as well as criminal opportunities (Lanfear 2022).
+
+???
+
+Perceived likelihood of retaliation may be low in high CE areas, and objective opportunities may also be lower.
 
 --
 
    * Disorder may be a signal for risks or other costs.
 
+???
+
+Broken windows highlights this---that disorder serves as a signal. What it signals appears to be more complex than BW as investigated by Innes (2004).
+
 --
 
    * Disorder may signal that interventions will have limited benefit.
+
+???
+
+Little effort required to clean up a single piece of litter, but what difference does picking it up make if there's tons on the ground?
 
 --
 
